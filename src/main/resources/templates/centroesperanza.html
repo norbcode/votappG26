@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Centro Esperanza</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/estilopartidos.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body id="body">
+    <header>
+        <section id="Logo">
+            <a th:href="@{/votappG26}">
+                <img src="img/logovotapp.png" width="200" height="75" alt="Logo"></a>
+            <img align="right" src="img/Logounabtic.png" width="250" height="75" alt="Logo">
+        </section>
+        <nav id="opciones">
+            <ul id="menu">
+                <li> <a th:href="@{/votappG26}">INICIO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido1}">GUSTAVO PETRO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido2}">RODOLFO HERNANDEZ</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido3}">SERGIO FAJARDO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido4}">FEDERICO GUTIERREZ</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div id="titulo">
+        <h1>CENTRO ESPERANZA</h1>
+    </div>
+
+    <div id="contenido">
+        <p> Somos conscientes de la necesidad de cambio que hay en muchos sectores del país, la crisis económica y
+            social junto con el mal gobierno
+            hacen ese cambio imperativo. Como alternativa a las propuestas extremas proponemos una transformación que
+            una a la mayoría de la población
+            con transparencia, inclusión y compromiso colectivo.<br><br>
+            La Liga de Gobernantes Anticorrupción es la primera lista a la Cámara de Representantes por Santander en
+            entregar firmas, así lo afirmó el
+            delegado departamental de la Registraduría Nacional del Estado Civil, Luis Alberto Chávez.
+            Los siete candidatos buscarán representar al departamento de Santander en el Congreso de la República, con
+            el fin de robustecer los procesos
+            y leyes que allí se establecen, y así minimizar los hechos de corrupción que tanto han afectado a las
+            regiones, impidiendo su desarrollo.
+            <br><br>
+            La crisis de la producción, la pobreza y el atraso predominan, aunque reconocemos que la Constitución del
+            91, la tutela, el proceso de paz han sido hechos históricos para el país, en los que la vida de millones de
+            colombianas
+            y colombianos se ha visto beneficiada profundamente.
+        </p><br>
+
+        <img src="img/imgcentroesperanza.jpg" class="estiloImg">
+
+    </div><br><br>
+
+    <div id="info">
+        <img src="img/logopartidofajardo.jpg" class="estiloImginfo"><br><br>
+        <img src="img/partidofajardo.jpg" class="estiloImginfo"><br><br>
+        <a th:href="@{/partido2}"><button type="button" class="btn btn-outline-warning">VER CANDIDATO
+                ANTERIOR</button><br><br></a>
+        <a th:href="@{/partido4}"><button type="button" class="btn btn-outline-primary">VER SIGUIENTE
+                CANDIDATO</button><br><br></a>
+        <a th:href="@{/votappG26}"><button type="button" class="btn btn-outline-danger">IR AL INICIO</button><br><br></a>
+    </div>
+
+    <footer id="footer" class="footer"><br><br>
+        &#169; Copyright - Tripulantes UNAB G26 Misión TIC 2022<br>
+        Norberto José Suarez Rodriguez | Kevin Alexis Rodriguez Rojas | María Camila Pineda Henao | Kevin Mauricio
+        Garcia Rivera | Cindy
+        Johanna Avila Vargas<br><br><br>
+    </footer>
+
+</body>
+
+</html>

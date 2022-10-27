@@ -1,0 +1,142 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>REGISTRAR VOTANTES</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{/css/estilo.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body id="body">
+<div class="textClass">
+		<h3>Registrar Votante</h3>
+	</div>
+	<form th:action="@{/saveVotante }" method="post" th:object=${votante}>
+		<div id="conForm">
+			<div class="mb-3">
+				<label for="labidentificacion" class="form-label">Identificacion:</label>
+				<input type="text" class="form-control" name="identificacion" id="identificacion" aria-describedby="identificacionHelp" required>
+				<div id="identificacionHelp" class="form-text">Digite el número de identificacion</div>
+			</div>
+			<div class="mb-3">
+				<label for="labnombres" class="form-label">Nombres:</label>
+				<input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="nombresHelp" required>
+				<div id="nombresHelp" class="form-text">Digite los nombres</div>
+			</div>
+			<div class="mb-3">
+				<label for="labapellidos" class="form-label">Apellidos:</label>
+				<input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="apellidosHelp" required>
+				<div id="apellidosHelp" class="form-text">Digite los appelidos</div>
+			</div>
+			<div class="mb-3">
+				<label for="labsexo" class="form-label">Sexo:</label>
+				<input type="radio" name="sexo" id="sexo" aria-describedby="sexoHelp"> Femenino
+				<input type="radio" name="sexo" id="sexo" aria-describedby="sexoHelp"> Masculino
+				<div id="sexoHelp" class="form-text">Seleccione el Sexo</div>
+			</div>
+			<div class="mb-3">
+				<label for="labfechaNac" class="form-label">fecha de Nacimiento:</label>
+				<input type="date" class="form-control" name="fechaNac" id="fechaNac" aria-describedby="fechaNacHelp" required>
+				<div id="fechaNacHelp" class="form-text">Seleccione la Fecha de Nacimiento</div>
+			</div>
+			<div class="mb-3">
+				<label for="labfechaExp" class="form-label">fecha de Expedición:</label>
+				<input type="date" class="form-control" name="fechaExp" id="fechaExp" aria-describedby="fechaExpHelp" required>
+				<div id="fechaExpHelp" class="form-text">Seleccione la Fecha de Expedición de la cédula</div>
+			</div>
+			<div class="mb-3">
+				<label for="lablugarNac" class="form-label">Lugar de Nacimiento:</label>
+				<select>
+				<option value=""></option>
+				<option value="1">Amazonas - Leticia</option>
+				<option value="2">Antioquia - Medellín</option>
+				<option value="3">Arauca - Arauca</option>
+				<option value="4">Atlántico - Barranquilla</option>
+				<option value="5">Bolivar - Cartagena de indias</option>
+				<option value="6">Boyacá - Tunja</option>
+				<option value="7">Caldas - Manizales</option>
+				<option value="8">Caquetá - Florencia</option>
+				<option value="9">Casanare - Yopal</option>
+				<option value="10">Cauca - Popayán</option>
+				<option value="11">Cesar - Valledupar</option>
+				<option value="12">Chocó - Quibdó</option>
+				<option value="13">Córdoba - Montería</option>
+				<option value="14">Cundinamarca -Bogotá D.C</option>
+				<option value="15">Guainía - Inírida</option>
+				<option value="16">Guaviare - San José del Guaviare</option>
+				<option value="17">Huila -Neiva</option>
+				<option value="18">La Guajira - Riohacha</option>
+				<option value="19">Magdalena - Santa Marta</option>
+				<option value="20">Meta - Villavicencio</option>
+				<option value="21">Nariño - Pasto</option>
+				<option value="22">Norte de Santander - San José de Cúcuta</option>
+				<option value="23">Putumayo - Mocoa</option>
+				<option value="24">Quindío - Armenia</option>
+				<option value="25">Risaralda - Pereira</option>
+				<option value="26">San Andrés y Providencia - San Andrés</option>
+				<option value="27">Santander - Bucaramanga</option>
+				<option value="28">Sucre - Sincelejo</option>
+				<option value="29">Tolima - Ibagué</option>
+				<option value="30">Valle del Cauca - Cali</option>
+				<option value="31">Vaupés - Mitú</option>
+				<option value="32">Vichada - Puerto Carreño</option>
+				</select>
+				<div id="lugarNacHelp" class="form-text">Seleccione el Lugar de Nacimiento</div>
+			</div>	
+			<div class="mb-3">
+				<label for="lablugarRes" class="form-label">Lugar de Residencia:</label>
+				<select>
+				<option value=""></option>
+				<option value="1">Amazonas - Leticia</option>
+				<option value="2">Antioquia - Medellín</option>
+				<option value="3">Arauca - Arauca</option>
+				<option value="4">Atlántico - Barranquilla</option>
+				<option value="5">Bolivar - Cartagena de indias</option>
+				<option value="6">Boyacá - Tunja</option>
+				<option value="7">Caldas - Manizales</option>
+				<option value="8">Caquetá - Florencia</option>
+				<option value="9">Casanare - Yopal</option>
+				<option value="10">Cauca - Popayán</option>
+				<option value="11">Cesar - Valledupar</option>
+				<option value="12">Chocó - Quibdó</option>
+				<option value="13">Córdoba - Montería</option>
+				<option value="14">Cundinamarca -Bogotá D.C</option>
+				<option value="15">Guainía - Inírida</option>
+				<option value="16">Guaviare - San José del Guaviare</option>
+				<option value="17">Huila -Neiva</option>
+				<option value="18">La Guajira - Riohacha</option>
+				<option value="19">Magdalena - Santa Marta</option>
+				<option value="20">Meta - Villavicencio</option>
+				<option value="21">Nariño - Pasto</option>
+				<option value="22">Norte de Santander - San José de Cúcuta</option>
+				<option value="23">Putumayo - Mocoa</option>
+				<option value="24">Quindío - Armenia</option>
+				<option value="25">Risaralda - Pereira</option>
+				<option value="26">San Andrés y Providencia - San Andrés</option>
+				<option value="27">Santander - Bucaramanga</option>
+				<option value="28">Sucre - Sincelejo</option>
+				<option value="29">Tolima - Ibagué</option>
+				<option value="30">Valle del Cauca - Cali</option>
+				<option value="31">Vaupés - Mitú</option>
+				<option value="32">Vichada - Puerto Carreño</option>
+				</select>
+				<div id="lugarResHelp" class="form-text">Seleccione el Lugar de Residencia</div>
+			</div>	
+			<div class="mb-3">
+				<label for="labtelefono" class="form-label">Teléfono:</label>
+				<input type="text" class="form-control" name="telefono" id="telefono" aria-describedby="telefonoHelp" required>
+				<div id="telefonoHelp" class="form-text">Digite número teléfonico</div>
+			</div>
+			<div class="mb-3">
+				<label for="labcorreo" class="form-label">Correo:</label>
+				<input type="email" class="form-control" name="correo" id="correo" aria-describedby="correoHelp" required>
+				<div id="correoHelp" class="form-text">Digite el Correo Electrónico</div>
+			</div>											
+			<button type="submit" class="btn btn-outline-secondary">Agregar</button>
+	</form>
+	</div>
+</body>
+
+</html>

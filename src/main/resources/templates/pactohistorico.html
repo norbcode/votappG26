@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pacto Historico</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/estilopartidos.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body id="body">
+    <header>
+        <section id="Logo">
+            <a th:href="@{/votappG26}">
+                <img src="img/logovotapp.png" width="200" height="75" alt="Logo"></a>
+            <img align="right" src="img/Logounabtic.png" width="250" height="75" alt="Logo">
+        </section>
+        <nav id="opciones">
+            <ul id="menu">
+                <li> <a th:href="@{/votappG26}">INICIO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido1}">GUSTAVO PETRO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido2}">RODOLFO HERNANDEZ</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido3}">SERGIO FAJARDO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido4}">FEDERICO GUTIERREZ</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div id="titulo">
+        <h1>PACTO HISTÓRICO</h1>
+    </div>
+
+    <div id="contenido">
+        <p> Con lista cerrada, el Pacto Histórico, la coalición política de izquierda, lanzada en febrero de 2021, fue
+            la gran vencedora de estas elecciones
+            legislativas para el periodo 2022-2026, logrando obtener 16 escaños en el Senado y 25 en Cámara e
+            imponiéndose en una gran mayoría del territorio
+            nacional.<br><br>
+            Pero, ¿quiénes lo conforman y qué proponen? El movimiento del Pacto Histórico está compuesto por cinco
+            partidos de izquierda y centroizquierda:
+            Colombia Humana, el Polo Democrático, el Movimiento Alternativo Indígena y Social (MAIS), y la Unión
+            Patriótica, reuniendo a representantes de
+            la oposición como Gustavo Bolívar, María José Pizarro, Alexander López Maya, Aida Avella, Roy Barreras,
+            Piedad Córdoba, Iván Cepeda y Clara López,
+            entre otros.<br><br>
+            De acuerdo con Adriana Otálora Buitrago, docente investigadora de la Universidad de La Salle, aunque como
+            Pacto Histórico llevan poco tiempo,
+            “Gustavo Petro ha seguido haciendo política, de hecho no ha parado desde hace cuatro años, y su forma de
+            hacer política, de incluir otros temas
+            en el debate público se fortalece con las alianzas que conforman hoy el Pacto Histórico, las cuales
+            defienden algunos de los principios básicos
+            del progresismo como la equidad de género, la inclusión y justicia social, y el cuidado del medio ambiente,
+            entre otros temas”.</p><br>
+
+        <img src="img/imgpactohistorico.jpg" class="estiloImg">
+
+    </div><br><br>
+
+    <div id="info">
+        <img src="img/logopactohistorico.png" class="estiloImginfo"><br><br>
+        <img src="img/partidopetro.jpg" class="estiloImginfo"><br><br>
+        <a th:href="@{/partido4}"><button type="button" class="btn btn-outline-warning">VER CANDIDATO
+                ANTERIOR</button><br><br></a>
+        <a th:href="@{/partido2}"><button type="button" class="btn btn-outline-primary">VER SIGUIENTE
+                CANDIDATO</button><br><br></a>
+        <a th:href="@{/votappG26}"><button type="button" class="btn btn-outline-danger">IR AL INICIO</button><br><br></a>
+    </div>
+
+    <footer id="footer" class="footer"><br><br>
+        &#169; Copyright - Tripulantes UNAB G26 Misión TIC 2022<br>
+        Norberto José Suarez Rodriguez | Kevin Alexis Rodriguez Rojas | María Camila Pineda Henao | Kevin Mauricio
+        Garcia Rivera | Cindy
+        Johanna Avila Vargas<br><br><br>
+    </footer>
+
+</body>
+
+</html>

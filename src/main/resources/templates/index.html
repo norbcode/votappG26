@@ -1,0 +1,163 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>votApp v.1.0</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+</head>
+
+<body id="body">
+    <header>
+        <section id="Logo">
+            <a th:href="@{/votappG26}">
+                <img src="img/logovotapp.png" width="200" height="75" alt="Logo"></a>
+            <img align="right" src="img/Logounabtic.png" width="250" height="75" alt="Logo">
+        </section>
+
+        <nav id="opciones">
+            <ul id="menu">
+                <li> <a th:href="@{/votappG26}">INICIO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido1}">GUSTAVO PETRO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido2}">RODOLFO HERNANDEZ</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido3}">SERGIO FAJARDO</a></li>&nbsp&nbsp&nbsp&nbsp
+                <li> <a th:href="@{/partido4}">FEDERICO GUTIERREZ</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <div id="titulo">
+        <h1>ELECCIONES PRESIDENCIALES 2022</h1>
+    </div>
+
+    <div id="contenido">
+        <p> Los ciudadanos que se acerquen a las urnas este 19 de junio recibirán por parte de los jurados de votación
+            la
+            tarjeta electoral para elegir a la fórmula presidencial de su preferencia y en la cual encontrarán a los
+            candidatos con sus fotos y nombres, y el logosímbolo de la agrupación política o coalición que los respalda.
+            Asimismo, encontrarán la casilla de voto en blanco. Según la Constitución de Colombia, pueden ejercer su
+            derecho a sufragio los ciudadanos mayores de 18 años de edad que no hagan parte de la Fuerza Pública, no
+            estén en un proceso de interdicción, y que no hayan sido condenados. Las personas que se encuentran en
+            centros de reclusión, tales como cárceles o reformatorios, podrán votar en los establecimientos que
+            determine la Registraduría Nacional. La inscripción en el registro civil no es automática, el ciudadano debe
+            dirigirse a la sede regional de la Registraduría para inscribir su identificación personal en un puesto de
+            votación.<br><br>
+            La elección del presidente de la república se hace junto con la del vicepresidente, siendo este último
+            su fórmula;
+            la estadía en el cargo será de cuatro años sin posibilidad de reelección. El proceso de elección no se
+            realizará simultáneamente con cualquier otro. La Constitución política en su artículo 191, establece que
+            quien
+            pretenda llegar al cargo debe ser colombiano de nacimiento y tener la nacionalidad, asimismo, ser mayor de
+            treinta años. <br><br>
+            La primera vuelta se celebrará el último domingo de mayo, que para el 2022 será el día 29, y resultará
+            ganador
+            quien haya obtenido la mitad más uno de los votos. En caso de que ninguno de los aspirantes obtenga esta
+            ponderación de los
+            votos, los dos candidatos que en primera vuelta hayan obtenido la mayoría de los votos irán a la segunda
+            vuelta; el ganador
+            será quien logre la mayoría de los votos.</p><br>
+
+        <div id="titulo">
+            <h2>PRESENTACIÓN DE CANDIDATOS</h2>
+        </div>
+
+        <br>
+
+        <!-- Tabla con la información de los candidatos -->
+
+        <table class="table table-dark table-striped">
+            <thead>
+                <th>
+                    <center>GUSTAVO PETRO</center>
+                </th>
+                <th>
+                    <center>RODOLFO HÉRNANDEZ</center>
+                </th>
+                <th>
+                    <center>SERGIO FAJARDO</center>
+                </th>
+                <th>
+                    <center>FEDERICO GUTIERREZ</center>
+                </th>
+            </thead>
+            <tr>
+                <td width="50">
+                    <a th:href="@{/partido1}" target="_blank">
+                        <img src="img/Gustavo Petro.jpg" class="estiloImg"></a><br>
+                    <p align="center">
+                        Gustavo Francisco Petro Urrego (Piedecuesta, 26 de marzo de 1945) es un ingeniero civil,
+                        empresario y político colombiano.
+                        <center><button class="btn btn-primary" style='width:70px; height:40px' role="button"
+                                data-bs-toggle="button" onclick="javascript:votar(0);">Votar</center><br>
+                        <center><a th:href="@{/partido1}" class="btn btn-primary" role="button"
+                                data-bs-toggle="button">Partido Político</a></center>
+                    </p>
+                </td>
+                <td width="50">
+                    <a th:href="@{/partido2}" target="_blank">
+                        <img src="img/Rodolfo Hernandez.jpg" class="estiloImg"></a><br>
+                    <p align="center">
+                        Rodolfo Hernández Suárez (Piedecuesta, 26 de marzo de 1945) es un ingeniero civil,
+                        empresario y político colombiano.
+                        <center><button class="btn btn-primary" style='width:70px; height:40px' role="button"
+                                data-bs-toggle="button" onclick="javascript:votar(1);">Votar</center><br>
+                        <center><a th:href="@{/partido2}" class="btn btn-primary" role="button"
+                                data-bs-toggle="button">Partido Político</a></center>
+                    </p>
+                </td>
+                <td width="50">
+                    <a th:href="@{/partido3}" target="_blank">
+                        <img src="img/Sergio Fajardo.jpg" class="estiloImg"></a><br>
+                    <p align="center">
+                        Sergio Fajardo Valderrama (Medellín, 19 de junio de 1956) es un docente, académico,
+                        empresario y político colombiano.
+                        <center><button class="btn btn-primary" style='width:70px; height:40px' role="button"
+                                data-bs-toggle="button" onclick="javascript:votar(2);">Votar</center><br>
+                        <center><a th:href="@{/partido3}" class="btn btn-primary" role="button"
+                                data-bs-toggle="button">Partido Político</a></center>
+                    </p>
+                </td>
+                <td width="50">
+                    <a th:href="@{/partido4}" target="_blank">
+                        <img src="img/Federico Gutierrez.jpg" class="estiloImg"></a><br>
+                    <p align="center">
+                        Federico Andrés Gutiérrez Zuluaga (Medellín, 28 de noviembre de 1974) es un ingeniero civil,
+                        empresario y político colombiano.
+                        <center><button class="btn btn-primary" style='width:70px; height:40px' role="button"
+                                data-bs-toggle="button" onclick="javascript:votar(3);">Votar</center><br>
+                        <center><a th:href="@{/partido4}" class="btn btn-primary" role="button"
+                                data-bs-toggle="button">Partido Político</a></center>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="info">
+        <img src="img/estadisticasvotapp.png" class="estiloImginfo"><br>
+        <button type="button" class="btn btn-outline-warning" onclick="javascript:estadistica();">Ver Resultados
+            Consolidados</button><br><br>
+        <button type="button" class="btn btn-outline-primary">Ver Resultados por Región</button><br><br>
+        <button type="button" class="btn btn-outline-danger">Ver Resultados por Ciudad</button><br><br><br>
+        <div id="stats"></div>
+        <canvas id="grafica"></canvas>
+        <script th:src="@{/js/votar.js}"></script>
+        <br>
+        <img src="img/Infovotantes.jpg" class="estiloImginfo"><br><br>
+        <img src="img/votoigualdad.png" class="estiloImginfo">
+    </div>
+
+    <footer id="footer" class="footer"><br><br>
+        &#169; Copyright - Tripulantes UNAB G26 Misión TIC 2022<br>
+        Norberto José Suarez Rodriguez | Kevin Alexis Rodriguez Rojas | María Camila Pineda Henao | Kevin Mauricio
+        Garcia Rivera | Cindy
+        Johanna Avila Vargas<br><br><br>
+    </footer>
+
+</body>
+
+</html>
